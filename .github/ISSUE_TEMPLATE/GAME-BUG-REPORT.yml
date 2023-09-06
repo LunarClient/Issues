@@ -1,0 +1,92 @@
+name: "🐛 Game Bug Report"
+description: Create a new ticket for a Game bug.
+title: "🐛 [Game] - <title>"
+labels: [
+  "platform: Game",
+  "type: Bug"
+]
+body:
+  # Description
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: Please enter an explicit description of your issue
+      placeholder: Short and explicit description of your incident...
+    validations:
+      required: true
+
+  # Reproduction steps
+  - type: textarea
+    id: reprod
+    attributes:
+      label: "Reproduction steps"
+      description: Please enter an explicit description of your issue
+      value: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+      render: bash
+    validations:
+      required: true
+
+  # Screenshots
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: "Screenshots"
+      description: If applicable, add screenshots to help explain your problem.
+      value: |
+        ![DESCRIPTION](LINK.png)
+      render: bash
+    validations:
+      required: false
+  
+  # Minecraft Versions
+  - type: dropdown
+    id: versions
+    attributes:
+      label: "Versions"
+      description: What Minecraft versions are you experiencing the problem on?
+      multiple: true
+      options:
+        - 1.7
+        - 1.8
+        - 1.12
+        - 1.16
+        - 1.17
+        - 1.18
+        - 1.19
+        - 1.20
+    validations:
+      required: false
+
+  # Lunar Client Modules
+  - type: dropdown
+    id: modules
+    attributes:
+      label: "Modules"
+      description: What Lunar Client modules are you experiencing the problem on?
+      multiple: true
+      options:
+        - "Sodium"
+        - "Optifine"
+        - "Forge"
+        - "Fabric"
+    validations:
+      required: false
+
+  # Operating Systems
+  - type: dropdown
+    id: os
+    attributes:
+      label: "Operating System"
+      description: What is the impacted environment?
+      multiple: true
+      options:
+        - Windows
+        - Linux
+        - Mac
+    validations:
+      required: false
